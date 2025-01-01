@@ -5,6 +5,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import PulsatingButton from '@/components/ui/pulsating-button';
 import { fireApiAction } from '@/config/api';
 import { RainbowButton } from '@/components/ui/rainbow-button';
+import Head from 'next/head';
 
 const BillPage = ({ params }) => {
     async function addName(name) {
@@ -100,6 +101,12 @@ const BillPage = ({ params }) => {
     }, [])
 
   return (
+    <>
+    <Head>
+      <title>Splitzer</title>
+      <meta name="description" content="Split the bill" />
+      <meta name="title" content="Splitzer" />
+    </Head>
     <div
         className='flex flex-row h-full flex-wrap items-center justify-center m-auto'
     >
@@ -285,6 +292,7 @@ const BillPage = ({ params }) => {
                 </RainbowButton>
             </div>
     </div>
+    </>
   )
 }
 
