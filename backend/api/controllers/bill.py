@@ -103,9 +103,14 @@ class CreateBill(APIView):
                 False
             )
             duck_conn.duck_sql("SELECT * FROM split.people")
+            res = duck_conn.duck_sql_fetchdf(f"""
+                SELECT * FROM split.people WHERE name = '{name}'
+            """)
+            print(res)
+
             duck_conn.close_connection()
 
-            return Response({"status": "201", "data": request.data}, status=201)
+            return Response({"status": "201", "data": request.data, "response": res.to_dict('records')[0]}, status=201)
 
         except duckdb.ConstraintException:
             return Response({"status": "400", "message": "Name already exists in your group"}, status=400)
@@ -116,12 +121,14 @@ class CreateBill(APIView):
         paid_by_people_id = request.data.get('paid_by')
         uuid = request.data.get('uuid')
         expense_division = request.data.get('expense_division')
+
+        print(request.data)
         
         directory = f"./data/{uuid}"
         duck_conn = DuckConnector(f"{directory}/bill.db")
         duck_conn.duck_sql(f"""
                             INSERT into split.expenses
-                           VALUES(nextval('seq_expense_id'), '{expense_name}', {paid_by_people_id}, {expense_amount}, MAP {expense_division});
+                           VALUES(nextval('seq_expense_id'), '{str(expense_name)}', {paid_by_people_id}, {expense_amount}, MAP {expense_division});
                            """,
                            False
         )

@@ -1,15 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import NextTopLoader from 'nextjs-toploader';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const jakarta_sans = Plus_Jakarta_Sans({
+  variable: "--font-plusjakarta",
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 export const metadata = {
   title: "Splitzer",
@@ -18,8 +16,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${jakarta_sans.variable} scroll-smooth`}>
+      <body className="">
+        <NextTopLoader 
+          color="#A7EE43"
+        />
+        <Header />
         {children}
       </body>
     </html>
