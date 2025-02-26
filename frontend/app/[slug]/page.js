@@ -1,11 +1,7 @@
 "use client"
 
-import React, { useState } from 'react'
-import { BorderBeam } from "@/components/ui/border-beam";
-import PulsatingButton from '@/components/ui/pulsating-button';
+import React from 'react'
 import { fireApiAction } from '@/config/api';
-import { RainbowButton } from '@/components/ui/rainbow-button';
-import Head from 'next/head';
 import wallet from '@/public/wallet.png'
 import paidByImage from '@/public/paid_by.png'
 import Image from 'next/image'

@@ -1,14 +1,9 @@
 "use client"
 
 import React from 'react'
-import Image from "next/image";
-import { BorderBeam } from "@/components/ui/border-beam";
-import { RainbowButton } from "@/components/ui/rainbow-button";
 import { fireApiAction } from "@/config/api";
-import { redirect } from "next/navigation";
-import Head from "next/head";
-import { useRouter } from 'nextjs-toploader/app';
 import { VscLoading } from "react-icons/vsc";
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
 

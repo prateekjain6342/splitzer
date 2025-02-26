@@ -1,7 +1,7 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import NextTopLoader from 'nextjs-toploader';
+// import NextTopLoader from 'nextjs-toploader';
 
 const jakarta_sans = Plus_Jakarta_Sans({
   variable: "--font-plusjakarta",
@@ -18,9 +18,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta_sans.variable} scroll-smooth`}>
       <body className="">
-        <NextTopLoader 
-          color="#A7EE43"
-        />
         <Header />
         {children}
       </body>
