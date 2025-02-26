@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta_sans.variable} scroll-smooth`}>
-      <GoogleAnalytics gaId="G-TJGLJ53HSG" />
+      <GoogleAnalytics gaId="G-265MDF3GQN" />
       <body className="">
         <Header />
         {children}
