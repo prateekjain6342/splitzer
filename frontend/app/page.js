@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="flex flex-col h-[calc(100dvh-64px)] lg:h-[calc(100dvh-80px)] justify-center items-center gap-32 bg-primaryDarkBlue"
+        className="flex flex-col h-[calc(100dvh-64px)] lg:h-[calc(100dvh-112px)] justify-center items-center gap-32 bg-primaryDarkBlue"
       >
         <div className="font-plusjakarta text-[#D6DDE6] flex-0 text-5xl lg:text-6xl xl:text-8xl text-center">
           Easily <span className="underline decoration-secondaryGreen">Split Bills</span> with Friends

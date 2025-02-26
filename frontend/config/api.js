@@ -3,8 +3,8 @@ import axios from "axios";
 const axioInstance = axios.create({
   //   baseURL: process.env.API_URL || process.env.NEXT_PUBLIC_API_URL,
 //   baseURL: process.env.NEXT_PUBLIC_API_ENDPOINT,
-    baseURL: "https://api-splitzer.prateekja.in"
-    // baseURL: "http://localhost:8000"
+    // baseURL: "https://api-splitzer.prateekja.in"
+    baseURL: "http://localhost:8000"
 });
 
 const fireApiAction = async (url, method = "GET", data = {}) => {
