@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${jakarta_sans.variable} scroll-smooth selection:text-[#A7EE43]`}>
       <GoogleAnalytics gaId="G-265MDF3GQN" />
-      <body className="">
+      <body className="bg-primaryDarkBlue">
         <Header />
         {children}
         <Footer />
