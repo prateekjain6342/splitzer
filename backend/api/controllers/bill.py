@@ -258,6 +258,6 @@ class CreateBill(APIView):
             if creditors[c]['net_amount'] == 0:
                 c += 1
 
-        duck_conn.close_connection()
+        duck_conn.close_connection() #close connection
 
         return Response({"status": "200", "data": result})
