@@ -1,2 +1,2 @@
 # Hosted Link:
-![Splitzer](https://splitzer.org)
+[Splitzer](https://splitzer.org)
